@@ -21,10 +21,10 @@ import (
 	"strings"
 )
 
-func aggregate(lines []string) []byte {
-	logs := make([]string, 0, 1000000)
+func aggregate(lines []string, n int) []byte {
+	logs := make([]string, 0, n)
 
-	for i := 0; i < 1000000; i++ {
+	for i := 0; i < n; i++ {
 		logs = append(logs, lines[rand.Intn(len(lines))])
 	}
 

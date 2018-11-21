@@ -38,7 +38,7 @@ func main() {
 	const minutes = 3
 
 	for minute := 0; minute < 10; /*60*24*days*/ minute += minutes {
-		buffer := aggregate(logLines)
+		buffer := aggregate(logLines, 1000000)
 
 		buffer[0] = byte(minute)
 		object := deriveName(t, buffer, "log")
